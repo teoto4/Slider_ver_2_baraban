@@ -18,6 +18,7 @@
     width: 70%;
     background-color: white;
     max-height: 40%;
+    overflow: hidden;
     .slide {
       width: 100%;
       height: 100%;
@@ -52,45 +53,67 @@
 }
 
 .slide_effect {
-  -webkit-animation: slide_effect 0.5s ease-out both;
-  animation: slide_effect 0.5s ease-out both;
+  -webkit-animation: 0.5s ease-in slidein;
+  animation: 0.5s ease-in slidein;
 }
 
-@-webkit-keyframes slide_effect {
+@-webkit-keyframes slidein {
   0% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
-    opacity: 0;
+    transform: translateX(190vh);
   }
 }
-@keyframes fade-out {
+@keyframes slidein {
   0% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
-    opacity: 0;
+    transform: translateX(190vh);
   }
 }
 
 .slide_back {
-  -webkit-animation: slide_back 1s ease-out reverse both;
-  animation: slide_back 1s ease-out reverse both;
+  -webkit-animation: slide_back 0.3s ease-out reverse both;
+  animation: slide_back 0.3s ease-out reverse both;
 }
 
 @-webkit-keyframes slide_back {
   0% {
-    opacity: 1;
+    transform: translateX(-110vh);
   }
   100% {
-    opacity: 0;
+    transform: translateX(0);
   }
 }
 @keyframes slide_back {
   0% {
-    opacity: 1;
+    transform: translateX(0);
   }
   100% {
-    opacity: 0;
+    transform: translateX(-110vh);
+  }
+}
+
+.slide_left {
+  -webkit-animation: slide_back 0.3s ease-out reverse both;
+  animation: slide_back 0.3s ease-out reverse both;
+}
+
+@-webkit-keyframes slide_left {
+  0% {
+    transform: translateX(110vh);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slide_left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(110vh);
   }
 }

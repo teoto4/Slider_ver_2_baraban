@@ -26,14 +26,14 @@ console.log(slider_array[1]);
 console.log(image_base[slider_array[0]]);
 
 arrow_left.addEventListener("click", (e) => {
-  slide.classList.add("slide_back");
-  slide.classList.replace("slide_back", "slide_effect");
+  slide.classList.add("slide_left");
+  slide.classList.replace("slide_left", "slide_effect");
   setTimeout(backSlide, 500);
 });
 arrow_right.addEventListener("click", (e) => {
   slide.classList.add("slide_back");
   slide.classList.replace("slide_back", "slide_effect");
-  setTimeout(nextSlide, 500);
+  setTimeout(nextSlide, 400);
 });
 
 function nextSlide() {
@@ -55,13 +55,10 @@ function backSlide() {
   }
   addSlide(image_base[slider_array[slide_index]]);
   console.log(slide_index);
-  slide.classList.replace("slide_effect", "slide_back");
+  slide.classList.replace("slide_effect", "slide_left");
   console.log(slide_index);
 }
 
-// timer.addEventListener("click", (e) => {
-//   setInterval(nextSlideTime, 3700);
-// });
 let intervalTimer;
 
 function nextSlideTime() {
@@ -83,3 +80,7 @@ timer.addEventListener("click", (e) => {
     intervalTimer = setInterval(nextSlideTime, 3700);
   }
 });
+
+// timer.addEventListener("click", (e) => {
+//   setInterval(nextSlideTime, 3700);
+// });
