@@ -53,8 +53,8 @@
 }
 
 .slide_effect {
-  -webkit-animation: 0.5s ease-in slidein;
-  animation: 0.5s ease-in slidein;
+  -webkit-animation: 0.6s ease-in slidein;
+  animation: 0.6s ease-in slidein;
 }
 
 @-webkit-keyframes slidein {
@@ -75,13 +75,13 @@
 }
 
 .slide_back {
-  -webkit-animation: slide_back 0.3s ease-out reverse both;
-  animation: slide_back 0.3s ease-out reverse both;
+  -webkit-animation: slide_back 0.5s ease-out reverse both;
+  animation: slide_back 0.5s ease-out reverse both;
 }
 
 @-webkit-keyframes slide_back {
   0% {
-    transform: translateX(-110vh);
+    transform: translateX(-150vh);
   }
   100% {
     transform: translateX(0);
@@ -92,21 +92,21 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-110vh);
+    transform: translateX(-150vh);
   }
 }
 
 .slide_left {
-  -webkit-animation: slide_back 0.3s ease-out reverse both;
-  animation: slide_back 0.3s ease-out reverse both;
+  -webkit-animation: slide_left 0.5s ease-out reverse both;
+  animation: slide_left 0.5s ease-out reverse both;
 }
 
 @-webkit-keyframes slide_left {
   0% {
-    transform: translateX(110vh);
+    transform: translateX(0vh);
   }
   100% {
-    transform: translateX(0);
+    transform: translateX(180vh);
   }
 }
 @keyframes slide_left {
@@ -114,6 +114,28 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(110vh);
+    transform: translateX(180vh);
+  }
+}
+
+.slide_effect_left {
+  -webkit-animation: 0.6s ease-in slideout;
+  animation: 0.6s ease-in slideout;
+}
+
+@-webkit-keyframes slideout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-190vh);
+  }
+}
+@keyframes slideout {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-190vh);
   }
 }

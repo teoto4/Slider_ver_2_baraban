@@ -27,13 +27,15 @@ console.log(image_base[slider_array[0]]);
 
 arrow_left.addEventListener("click", (e) => {
   slide.classList.add("slide_left");
-  slide.classList.replace("slide_left", "slide_effect");
+  slide.classList.remove("slide_back");
+  slide.classList.replace("slide_left", "slide_effect_left");
   setTimeout(backSlide, 500);
 });
 arrow_right.addEventListener("click", (e) => {
   slide.classList.add("slide_back");
+  slide.classList.remove("slide_left");
   slide.classList.replace("slide_back", "slide_effect");
-  setTimeout(nextSlide, 400);
+  setTimeout(nextSlide, 500);
 });
 
 function nextSlide() {
@@ -55,7 +57,7 @@ function backSlide() {
   }
   addSlide(image_base[slider_array[slide_index]]);
   console.log(slide_index);
-  slide.classList.replace("slide_effect", "slide_left");
+  slide.classList.replace("slide_effect_left", "slide_left");
   console.log(slide_index);
 }
 
