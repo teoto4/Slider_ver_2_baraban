@@ -29,13 +29,13 @@
     .arrow_png {
       position: absolute;
       width: 150px;
-      left: -80px;
+      left: 0px;
       top: 300px;
       cursor: pointer;
     }
     .arrow_png_right {
       position: absolute;
-      right: -80px;
+      right: 0px;
       top: 300px;
       width: 150px;
       transform: rotate(180deg);
@@ -46,7 +46,8 @@
 
 .timer {
   position: absolute;
-  bottom: 0;
+  bottom: 0px;
+  right: 0px;
   max-width: 100px;
   height: 70px;
   cursor: pointer;

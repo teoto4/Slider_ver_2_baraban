@@ -45,6 +45,7 @@ function nextSlide() {
   }
   addSlide(image_base[slider_array[slide_index]]);
   console.log(slide_index);
+  slide.classList.remove("slide_left");
   slide.classList.replace("slide_effect", "slide_back");
   console.log(slide_index);
 }
@@ -66,7 +67,7 @@ let intervalTimer;
 function nextSlideTime() {
   slide.classList.add("slide_back");
   slide.classList.replace("slide_back", "slide_effect");
-  setTimeout(nextSlide, 700);
+  setTimeout(nextSlide, 500);
 }
 console.log(timer.click);
 
