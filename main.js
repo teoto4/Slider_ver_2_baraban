@@ -9,15 +9,19 @@ const timer = document.querySelector(".timer");
 
 console.dir(slide);
 
+// getAllEllement
+
 function addSlide(target_slide) {
   slide.src = target_slide;
 }
+// Get slide
 
 addSlide(image_base.first_slide);
+// start_position
 
 let slide_index = 0;
 
-const slider_array = [];
+const slider_array = []; // slider_base
 for (let key in image_base) {
   slider_array.push(key);
 }
@@ -37,6 +41,7 @@ arrow_right.addEventListener("click", (e) => {
   slide.classList.replace("slide_back", "slide_effect");
   setTimeout(nextSlide, 500);
 });
+// slide_btn + Effect
 
 function nextSlide() {
   slide_index += 1;
@@ -48,7 +53,7 @@ function nextSlide() {
   slide.classList.remove("slide_left");
   slide.classList.replace("slide_effect", "slide_back");
   console.log(slide_index);
-}
+} //slider_logic
 
 function backSlide() {
   slide_index -= 1;
@@ -62,7 +67,7 @@ function backSlide() {
   console.log(slide_index);
 }
 
-let intervalTimer;
+let intervalTimer; // setTime - timer
 
 function nextSlideTime() {
   slide.classList.add("slide_back");
