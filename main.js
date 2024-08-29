@@ -53,7 +53,7 @@ function nextSlide() {
 function backSlide() {
   slide_index -= 1;
   console.log(slide_index);
-  if (slide_index <= 0) {
+  if (slide_index < 0) {
     slide_index = 4;
   }
   addSlide(image_base[slider_array[slide_index]]);
