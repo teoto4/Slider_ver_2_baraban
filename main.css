@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 90vw;
+
+  .slider_container {
+    /* overflow: hidden; */
+    margin-top: 100px;
+    position: relative;
+    width: 70%;
+    background-color: white;
+    max-height: 40%;
+    .slide {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .arrow_png {
+      position: absolute;
+      width: 150px;
+      left: -80px;
+      top: 300px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .arrow_png_right {
+      z-index: 10;
+      position: absolute;
+      right: -80px;
+      top: 300px;
+      width: 150px;
+      transform: rotate(180deg);
+      cursor: pointer;
+    }
+  }
+}
+
+.timer {
+  position: absolute;
+  bottom: 0;
+  max-width: 100px;
+  height: 70px;
+  cursor: pointer;
+}
+
+.slide_effect {
+  transition: margin-right 2s;
+}
+
+/* @-webkit-keyframes slide_effect {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide_effect {
+  0% {
+    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+    transform: translateX(0) scaleY(1) scaleX(1);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+} */
+
+/* .slide_back {
+  -webkit-animation: slide_back 1s ease-out reverse both;
+  animation: slide_back 1s ease-out reverse both;
+}
+
+@-webkit-keyframes slide_back {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes slide_back {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */
