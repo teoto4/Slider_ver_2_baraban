@@ -28,12 +28,12 @@ console.log(image_base[slider_array[0]]);
 arrow_left.addEventListener("click", (e) => {
   slide.classList.add("slide_back");
   slide.classList.replace("slide_back", "slide_effect");
-  backSlide();
+  setTimeout(backSlide, 500);
 });
 arrow_right.addEventListener("click", (e) => {
   slide.classList.add("slide_back");
   slide.classList.replace("slide_back", "slide_effect");
-  nextSlide();
+  setTimeout(nextSlide, 500);
 });
 
 function nextSlide() {

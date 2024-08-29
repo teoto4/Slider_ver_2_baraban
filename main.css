@@ -13,7 +13,6 @@
   height: 90vw;
 
   .slider_container {
-    /* overflow: hidden; */
     margin-top: 100px;
     position: relative;
     width: 70%;
@@ -32,10 +31,8 @@
       left: -80px;
       top: 300px;
       cursor: pointer;
-      z-index: 10;
     }
     .arrow_png_right {
-      z-index: 10;
       position: absolute;
       right: -80px;
       top: 300px;
@@ -55,52 +52,28 @@
 }
 
 .slide_effect {
-  transition: margin-right 2s;
+  -webkit-animation: slide_effect 0.5s ease-out both;
+  animation: slide_effect 0.5s ease-out both;
 }
 
-/* @-webkit-keyframes slide_effect {
+@-webkit-keyframes slide_effect {
   0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
-    opacity: 0;
+    opacity: 1;
   }
   100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-    transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-    filter: blur(0);
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-@keyframes slide_effect {
-  0% {
-    -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
-    -webkit-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-    -webkit-filter: blur(40px);
-    filter: blur(40px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0) scaleY(1) scaleX(1);
-    transform: translateX(0) scaleY(1) scaleX(1);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-filter: blur(0);
-    filter: blur(0);
-    opacity: 1;
-  }
-} */
-
-/* .slide_back {
+.slide_back {
   -webkit-animation: slide_back 1s ease-out reverse both;
   animation: slide_back 1s ease-out reverse both;
 }
@@ -120,4 +93,4 @@
   100% {
     opacity: 0;
   }
-} */
+}
